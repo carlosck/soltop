@@ -1,0 +1,48 @@
+
+
+
+
+@font-face {
+    font-family: 'robotobold';
+    src: url('roboto-bold-webfont.woff2') format('woff2'),
+         url('roboto-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'robotoregular';
+    src: url('roboto-regular-webfont.woff2') format('woff2'),
+         url('roboto-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'avenir_nextdemi_bold';
+    src: url('avenirnext-demibold-03-webfont.woff2') format('woff2'),
+         url('avenirnext-demibold-03-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'avenir_nextdemi_bold_italic';
+    src: url('avenirnext-demibolditalic-04-webfont.woff2') format('woff2'),
+         url('avenirnext-demibolditalic-04-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
