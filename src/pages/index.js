@@ -20,7 +20,14 @@ export default function Home() {
             <div className={`${styles.menuLeft}`}>
                      
               <div className={`${styles.menuLogoContainer}`}>
-                <div className={`${styles.menuLogo}`}></div>
+                <Image
+                  src="/soltop_logo.png"
+                  alt="Soltop Logo"
+                  className={styles.menuLogo}
+                  width={160}
+                  height={38}
+                  priority
+                />
               </div>
               <div className={`${styles.menuItems}`}>
                 <a href="#" className={`${styles.menuItem}`}>
@@ -39,65 +46,180 @@ export default function Home() {
             </div> 
             <div className={`${styles.menuWhatsContainer}`}>
               <div className={`${styles.menuWhats}`}>
-                <div className={`${styles.menuWhatsIcon}`}></div>
-                <div className={`${styles.menuWhatsText}`}>844-088-0492</div>
+                
+                <Image
+                  src="/whatsapp_logo.png"
+                  alt="WhatsApp Logo"
+                  className={styles.menuWhatsIcon}
+                  width={32}
+                  height={32}
+                  priority
+                />
+                
+                <div className={`${styles.menuWhatsText}`}>844 - 088 - 0492</div>
               </div>
             </div>
           </div>
         </menu>
-        <div  className={`${styles.hero} ${styles.section}`}>
-          <div className={`${styles.heroImageContainer}`}>
-            <div className={`${styles.heroImage}`}></div>
-          </div>
-          <div className={`${styles.heroTextContainer}`}>
-            <div className={`${styles.heroText}`}>
-              <div className={`${styles.heroTitle}`}>Servicios de topografía de la más alta calidad y precisión</div>
-              <div className={`${styles.heroSubtitle}`}>
-              Soluciones eficientes y efectivas para la gestión de tierras, la construcción y la planificación urbana.
+        <div className={`${styles.heroImageContainer}`}>
+          <Image
+            src="/soltop_header.jpg"
+            alt="Soltop hero"
+            className={styles.heroImage}
+            width={1366}
+            height={768}
+            priority
+          />
+          <div  className={`${styles.hero} ${styles.section}`}>
+          
+            <div className={`${styles.stage}`}>
+              <div className={`${styles.heroTextContainer}`}>
+                <div className={`${styles.heroText}`}>
+                  <div className={`${styles.heroTitle}`}>Servicios de topografía de la más alta calidad y precisión</div>
+                  <div className={`${styles.heroSubtitle}`}>
+                  Soluciones eficientes y efectivas para la gestión de tierras, la construcción y la planificación urbana.
+                  </div>
+                </div>
               </div>
-            </div>            
+            </div>
+            
           </div>
         </div>
+        
         <div className={`${styles.services} ${styles.section}`}>
-          <ul className={`${styles.servicesItemscontainer}`}>
-            <li className={`${styles.servicesItem}`}>
-              <div className={`${styles.servicesItemIcon}`}></div>
-              <div className={`${styles.servicesItemTitle}`}>Supervisión de Proyectos</div>              
-            </li>
-            <li className={`${styles.servicesItem}`}>
-              <div className={`${styles.servicesItemIcon}`}></div>
-              <div className={`${styles.servicesItemTitle}`}>Levantamientos Topográficos</div>              
-            </li>
-            <li className={`${styles.servicesItem}`}>
-              <div className={`${styles.servicesItemIcon}`}></div>
-              <div className={`${styles.servicesItemTitle}`}>Deslindes de Predios</div>              
-            </li>
-            <li className={`${styles.servicesItem}`}>
-              <div className={`${styles.servicesItemIcon}`}></div>
-              <div className={`${styles.servicesItemTitle}`}>Fotogrametría</div>              
-            </li>
-            <li className={`${styles.servicesItem}`}>
-              <div className={`${styles.servicesItemIcon}`}></div>
-              <div className={`${styles.servicesItemTitle}`}>Proyectos de Rasantes</div>              
-            </li>
-            <li className={`${styles.servicesItem}`}>
-              <div className={`${styles.servicesItemIcon}`}></div>
-              <div className={`${styles.servicesItemTitle}`}>Control de Movimientos de Tierra</div>              
-            </li>
-            <li className={`${styles.servicesItem}`}>
-              <div className={`${styles.servicesItemIcon}`}></div>
-              <div className={`${styles.servicesItemTitle}`}>Escáner 3D</div>              
-            </li>
-          </ul>
-          <div className={`${styles.servicesText}`}>
-            <div className={`${styles.servicesTitle}`}>Nuestra dedicación al detalle y servicio al cliente nos impulsa a superar expectativas.</div>
-            <div className={`${styles.servicesSubtitle}`}>Transformamos el paisaje de la topografía impulsando avances tecnológicos y metodológicos que faciliten la toma de decisiones y la gestión del territorio de manera más eficaz y sostenible.</div>
+          
+          <div className={`${styles.stage}`}>
+            <ul className={`${styles.servicesItemscontainer}`}>
+              <li className={`${styles.servicesItem}`}>
+                <div className={`${styles.servicesItemIconContainer}`}>
+                  <Image
+                    src="/servicios_logo.png"
+                    alt="Soltop servicios logo"
+                    className={styles.servicesItemIcon}
+                    width={49}
+                    height={49}
+                    priority
+                  />
+                </div>
+                <div className={`${styles.servicesItemTitle}`}>Supervisión de Proyectos</div>              
+              </li>
+              <li className={`${styles.servicesItem}`}>
+                <div className={`${styles.servicesItemIconContainer}`}>
+                  <Image
+                    src="/servicios_logo.png"
+                    alt="Soltop servicios logo"
+                    className={styles.servicesItemIcon}
+                    width={49}
+                    height={49}
+                    priority
+                  />
+                </div>
+                <div className={`${styles.servicesItemTitle}`}>Levantamientos Topográficos</div>              
+              </li>
+              <li className={`${styles.servicesItem}`}>
+                <div className={`${styles.servicesItemIconContainer}`}>
+                  <Image
+                    src="/servicios_logo.png"
+                    alt="Soltop servicios logo"
+                    className={styles.servicesItemIcon}
+                    width={49}
+                    height={49}
+                    priority
+                  />
+                </div>
+                <div className={`${styles.servicesItemTitle}`}>Deslindes de Predios</div>              
+              </li>
+              <li className={`${styles.servicesItem}`}>
+                <div className={`${styles.servicesItemIconContainer}`}>
+                  <Image
+                    src="/servicios_logo.png"
+                    alt="Soltop servicios logo"
+                    className={styles.servicesItemIcon}
+                    width={49}
+                    height={49}
+                    priority
+                  />
+                </div>
+                <div className={`${styles.servicesItemTitle}`}>Fotogrametría</div>              
+              </li>
+              <li className={`${styles.servicesItem}`}>
+                <div className={`${styles.servicesItemIconContainer}`}>
+                  <Image
+                    src="/servicios_logo.png"
+                    alt="Soltop servicios logo"
+                    className={styles.servicesItemIcon}
+                    width={49}
+                    height={49}
+                    priority
+                  />
+                </div>
+                <div className={`${styles.servicesItemTitle}`}>Proyectos de Rasantes</div>              
+              </li>
+              <li className={`${styles.servicesItem}`}>
+                <div className={`${styles.servicesItemIconContainer}`}>
+                  <Image
+                    src="/servicios_logo.png"
+                    alt="Soltop servicios logo"
+                    className={styles.servicesItemIcon}
+                    width={49}
+                    height={49}
+                    priority
+                  />
+                </div>
+                <div className={`${styles.servicesItemTitle}`}>Control de Movimientos de Tierra</div>              
+              </li>
+              <li className={`${styles.servicesItem}`}>
+                <div className={`${styles.servicesItemIconContainer}`}>
+                  <Image
+                    src="/servicios_logo.png"
+                    alt="Soltop servicios logo"
+                    className={styles.servicesItemIcon}
+                    width={49}
+                    height={49}
+                    priority
+                  />
+                </div>
+                <div className={`${styles.servicesItemTitle}`}>Escáner 3D</div>              
+              </li>
+            </ul>
+            
+            
           </div>
+          <div className={`${styles.servicesImageContainer}`}>
+            <Image
+              src="/services_background.png"
+              alt="Services Background"
+              className={styles.servicesImage}
+              width={1366}
+              height={812}
+            />
+            <div className={`${styles.stage}`}>
+              <div className={`${styles.servicesTextContainer}`}>
+                <div className={`${styles.servicesText}`}>
+                  <div className={`${styles.servicesTitle}`}>Nuestra dedicación al detalle y servicio al cliente nos impulsa a superar expectativas.</div>
+                  <div className={`${styles.servicesSubtitle}`}>Transformamos el paisaje de la topografía impulsando avances tecnológicos y metodológicos que faciliten la toma de decisiones y la gestión del territorio de manera más eficaz y sostenible.</div>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+          
         </div>
         <div className={`${styles.projects} ${styles.section}`}>
-          <div className={`${styles.projectsText}`}>
-            <div className={`${styles.projectsTitle}`}>Nuestros Proyectos</div>
-            <div className={`${styles.projectsSubtitle}`}>Reconocidos por la excelencia,  innovación y contribución a desarrollo sostenible.</div>
+          <div className={`${styles.projectsHeader}`}>
+            <div className={`${styles.projectHeaderImageContainer}`}>
+              <Image
+                src="/projects_background.png"
+                alt="Projects Background"
+                className={styles.projectHeaderImage}
+                width={1366}
+                height={457}
+              />
+            </div>
+            <div className={`${styles.stage}`}>
+              <h2 className={`${styles.projectsTitle}`}>Nuestros Proyectos</h2>
+              <div className={`${styles.projectsSubtitle}`}>Reconocidos por la excelencia,  innovación y contribución a desarrollo sostenible.</div>
+            </div>
           </div>
           <div className={`${styles.projectsMainItemcontainer}`}>
             <div className={`${styles.projectsItem} ${styles.projectsMain}`}>
