@@ -221,105 +221,178 @@ export default function Home() {
               <div className={`${styles.projectsSubtitle}`}>Reconocidos por la excelencia,  innovación y contribución a desarrollo sostenible.</div>
             </div>
           </div>
+          
           <div className={`${styles.projectsMainItemcontainer}`}>
             <div className={`${styles.projectsItem} ${styles.projectsMain}`}>
-              <div className={`${styles.projectsItemBackground}`}></div>
-              <div className={`${styles.projectsItemDataContainer}`}>
-                <div className={`${styles.projectsItemData}`}>
-                  <div className={`${styles.projectsItemType}`}>Proyecto</div>
-                  <div className={`${styles.projectsItemContent}`}>Ikano</div>
-                </div>
-                <div className={`${styles.projectsItemData}`}>
-                  <div className={`${styles.projectsItemType}`}>Ubicación</div>
-                  <div className={`${styles.projectsItemContent}`}>Ramos Arizpe, Coahuila</div>
-                </div>
-                <div className={`${styles.projectsItemData}`}>
-                  <div className={`${styles.projectsItemType}`}>Actividad</div>
-                  <div className={`${styles.projectsItemContent}`}>Iniciando con los trabajos del proyecto de rasantes para una vez que fue aceptado, pasar a los trabajos de terracerías, cimentaciones, obra civil, montaje de estructura, instalaciones subterráneas, etc. Durante estas actividades en obra, también se llevó de manera paralela, el control de movimientos de tierra y modificaciones al proyecto por necesidades del cliente.</div>
-                </div>              
+              <div className={`${styles.projectsItemBackground}`}>
+                <Image
+                  src="/img_proyecto_ikano.png"
+                  alt="Ikano Project"
+                  className={styles.projectsItemImage}
+                  width={683}
+                  height={568}
+                />
               </div>
+              <div className={`${styles.projectsItemRight}`}>
+                <div className={`${styles.projectsItemMainBGContainer}`}>
+                  <Image
+                    src="/project_main_bg.png"
+                    alt="Project Main Background"
+                    className={styles.projectsItemMainBG}
+                    width={683}
+                    height={568}
+                  />
+                </div>
+                <div className={`${styles.projectsItemDataContainer}`}>
+                
+                  <div className={`${styles.projectsItemData}`}>
+                    <div className={`${styles.projectsItemType}`}>Proyecto</div>
+                    <div className={`${styles.projectsItemName}`}>Ikano</div>
+                  </div>
+                  <div className={`${styles.projectsItemData}`}>
+                    <div className={`${styles.projectsItemType}`}>Ubicación</div>
+                    <div className={`${styles.projectsItemContent}`}>Ramos Arizpe, Coahuila</div>
+                  </div>
+                  <div className={`${styles.projectsItemData}`}>
+                    <div className={`${styles.projectsItemType}`}>Actividad</div>
+                    <div className={`${styles.projectsItemContent}`}>Iniciando con los trabajos del proyecto de rasantes para una vez que fue aceptado, pasar a los trabajos de terracerías, cimentaciones, obra civil, montaje de estructura, instalaciones subterráneas, etc. Durante estas actividades en obra, también se llevó de manera paralela, el control de movimientos de tierra y modificaciones al proyecto por necesidades del cliente.</div>
+                  </div>              
+                </div>
+              </div>
+              
+              
             </div>
           </div>
           <div className={`${styles.projectsItemsContainer}`}>
-            <div className={`${styles.projectsItem}`}>
-              <div className={`${styles.projectsItemBackground}`}></div>
-              <div className={`${styles.projectsItemDataContainer}`}>
-                <div className={`${styles.projectsItemData}`}>
-                  <div className={`${styles.projectsItemType}`}>Proyecto</div>
-                  <div className={`${styles.projectsItemContent}`}>Lennox 3</div>
+            <div className={`${styles.stage}`}>
+              <div className={`${styles.projectsItem}`}>
+                <div className={`${styles.projectsItemBackground}`}>
+                  <Image
+                    src="/img_project_lennox3.png"
+                    alt="Project Lenox 3 "
+                    className={styles.projectsItemImage}
+                    width={382}
+                    height={306}
+                  />
                 </div>
-                <div className={`${styles.projectsItemData}`}>
-                  <div className={`${styles.projectsItemType}`}>Ubicación</div>
-                  <div className={`${styles.projectsItemContent}`}>Ramos Arizpe, Coahuila</div>
-                </div>                             
-              </div>
-            </div>
-            <div className={`${styles.projectsItem}`}>
-              <div className={`${styles.projectsItemBackground}`}></div>
-              <div className={`${styles.projectsItemDataContainer}`}>
-                <div className={`${styles.projectsItemData}`}>
-                  <div className={`${styles.projectsItemType}`}>Proyecto</div>
-                  <div className={`${styles.projectsItemContent}`}>Martinrea Fluidos</div>
+                <div className={`${styles.projectsItemDataContainer}`}>
+                  <div className={`${styles.projectsItemData}`}>
+                    <div className={`${styles.projectsItemType}`}>Proyecto</div>
+                    <div className={`${styles.projectsItemName}`}>Lennox 3</div>
+                  </div>
+                  <div className={`${styles.projectsItemData}`}>
+                    <div className={`${styles.projectsItemType}`}>Ubicación</div>
+                    <div className={`${styles.projectsItemContent}`}>Ramos Arizpe, Coahuila</div>
+                  </div>                             
                 </div>
-                <div className={`${styles.projectsItemData}`}>
-                  <div className={`${styles.projectsItemType}`}>Ubicación</div>
-                  <div className={`${styles.projectsItemContent}`}>Ramos Arizpe, Coahuila</div>
-                </div>                             
               </div>
-            </div>
-            <div className={`${styles.projectsItem}`}>
-              <div className={`${styles.projectsItemBackground}`}></div>
-              <div className={`${styles.projectsItemDataContainer}`}>
-                <div className={`${styles.projectsItemData}`}>
-                  <div className={`${styles.projectsItemType}`}>Proyecto</div>
-                  <div className={`${styles.projectsItemContent}`}>Skyjack</div>
+              <div className={`${styles.projectsItem}`}>
+                <div className={`${styles.projectsItemBackground}`}>
+                  <Image
+                    src="/project_martinrea_fluidos.png"
+                    alt="Project Martinrea Fluidos "
+                    className={styles.projectsItemImage}
+                    width={382}
+                    height={306}
+                  />
                 </div>
-                <div className={`${styles.projectsItemData}`}>
-                  <div className={`${styles.projectsItemType}`}>Ubicación</div>
-                  <div className={`${styles.projectsItemContent}`}>Ramos Arizpe, Coahuila</div>
-                </div>                             
-              </div>
-            </div>
-            <div className={`${styles.projectsItem}`}>
-              <div className={`${styles.projectsItemBackground}`}></div>
-              <div className={`${styles.projectsItemDataContainer}`}>
-                <div className={`${styles.projectsItemData}`}>
-                  <div className={`${styles.projectsItemType}`}>Proyecto</div>
-                  <div className={`${styles.projectsItemContent}`}>Lennox Iron Gate</div>
+                <div className={`${styles.projectsItemDataContainer}`}>
+                  <div className={`${styles.projectsItemData}`}>
+                    <div className={`${styles.projectsItemType}`}>Proyecto</div>
+                    <div className={`${styles.projectsItemName}`}>Martinrea Fluidos</div>
+                  </div>
+                  <div className={`${styles.projectsItemData}`}>
+                    <div className={`${styles.projectsItemType}`}>Ubicación</div>
+                    <div className={`${styles.projectsItemContent}`}>Ramos Arizpe, Coahuila</div>
+                  </div>                             
                 </div>
-                <div className={`${styles.projectsItemData}`}>
-                  <div className={`${styles.projectsItemType}`}>Ubicación</div>
-                  <div className={`${styles.projectsItemContent}`}>Ramos Arizpe, Coahuila</div>
-                </div>                             
               </div>
-            </div>
-            <div className={`${styles.projectsItem}`}>
-              <div className={`${styles.projectsItemBackground}`}></div>
-              <div className={`${styles.projectsItemDataContainer}`}>
-                <div className={`${styles.projectsItemData}`}>
-                  <div className={`${styles.projectsItemType}`}>Proyecto</div>
-                  <div className={`${styles.projectsItemContent}`}>Martinrea Estampados</div>
+              <div className={`${styles.projectsItem}`}>
+                <div className={`${styles.projectsItemBackground}`}>
+                  <Image
+                    src="/project_skyjack.png"
+                    alt="Project Skyjack "
+                    className={styles.projectsItemImage}
+                    width={382}
+                    height={306}
+                  />
                 </div>
-                <div className={`${styles.projectsItemData}`}>
-                  <div className={`${styles.projectsItemType}`}>Ubicación</div>
-                  <div className={`${styles.projectsItemContent}`}>Ramos Arizpe, Coahuila</div>
-                </div>                             
-              </div>
-            </div>
-            <div className={`${styles.projectsItem}`}>
-              <div className={`${styles.projectsItemBackground}`}></div>
-              <div className={`${styles.projectsItemDataContainer}`}>
-                <div className={`${styles.projectsItemData}`}>
-                  <div className={`${styles.projectsItemType}`}>Proyecto</div>
-                  <div className={`${styles.projectsItemContent}`}>Mahle 3</div>
+                <div className={`${styles.projectsItemDataContainer}`}>
+                  <div className={`${styles.projectsItemData}`}>
+                    <div className={`${styles.projectsItemType}`}>Proyecto</div>
+                    <div className={`${styles.projectsItemName}`}>Skyjack</div>
+                  </div>
+                  <div className={`${styles.projectsItemData}`}>
+                    <div className={`${styles.projectsItemType}`}>Ubicación</div>
+                    <div className={`${styles.projectsItemContent}`}>Ramos Arizpe, Coahuila</div>
+                  </div>                             
                 </div>
-                <div className={`${styles.projectsItemData}`}>
-                  <div className={`${styles.projectsItemType}`}>Ubicación</div>
-                  <div className={`${styles.projectsItemContent}`}>Ramos Arizpe, Coahuila</div>
-                </div>                             
               </div>
+              <div className={`${styles.projectsItem}`}>
+                <div className={`${styles.projectsItemBackground}`}>
+                  <Image
+                    src="/project_lennox_iron_gate.png"
+                    alt="Project Lennox Iron Gate "
+                    className={styles.projectsItemImage}
+                    width={382}
+                    height={306}
+                  />
+                </div>
+                <div className={`${styles.projectsItemDataContainer}`}>
+                  <div className={`${styles.projectsItemData}`}>
+                    <div className={`${styles.projectsItemType}`}>Proyecto</div>
+                    <div className={`${styles.projectsItemName}`}>Lennox Iron Gate</div>
+                  </div>
+                  <div className={`${styles.projectsItemData}`}>
+                    <div className={`${styles.projectsItemType}`}>Ubicación</div>
+                    <div className={`${styles.projectsItemContent}`}>Ramos Arizpe, Coahuila</div>
+                  </div>                             
+                </div>
+              </div>
+              <div className={`${styles.projectsItem}`}>
+                <div className={`${styles.projectsItemBackground}`}>
+                  <Image
+                    src="/project_martinrea_estampados.png"
+                    alt="Project Martinrea Estampados "
+                    className={styles.projectsItemImage}
+                    width={382}
+                    height={306}
+                  />
+                </div>
+                <div className={`${styles.projectsItemDataContainer}`}>
+                  <div className={`${styles.projectsItemData}`}>
+                    <div className={`${styles.projectsItemType}`}>Proyecto</div>
+                    <div className={`${styles.projectsItemName}`}>Martinrea Estampados</div>
+                  </div>
+                  <div className={`${styles.projectsItemData}`}>
+                    <div className={`${styles.projectsItemType}`}>Ubicación</div>
+                    <div className={`${styles.projectsItemContent}`}>Ramos Arizpe, Coahuila</div>
+                  </div>                             
+                </div>
+              </div>
+              <div className={`${styles.projectsItem}`}>
+                <div className={`${styles.projectsItemBackground}`}>
+                  <Image
+                    src="/project_mahle3.png"
+                    alt="Project Mahle 3 "
+                    className={styles.projectsItemImage}
+                    width={382}
+                    height={306}
+                  />
+                </div>
+                <div className={`${styles.projectsItemDataContainer}`}>
+                  <div className={`${styles.projectsItemData}`}>
+                    <div className={`${styles.projectsItemType}`}>Proyecto</div>
+                    <div className={`${styles.projectsItemName}`}>Mahle 3</div>
+                  </div>
+                  <div className={`${styles.projectsItemData}`}>
+                    <div className={`${styles.projectsItemType}`}>Ubicación</div>
+                    <div className={`${styles.projectsItemContent}`}>Ramos Arizpe, Coahuila</div>
+                  </div>                             
+                </div>
+              </div>
+              
             </div>
-            
           </div>
         </div>
         <div className={`${styles.contact} ${styles.section}`}>

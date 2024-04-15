@@ -218,6 +218,7 @@
   display: flex;
   justify-content: center;
   flex-direction: column;  
+  background-color: #f9f7f1;
 }
 .projectsHeader{
   display: flex;
@@ -260,8 +261,125 @@
 .projectsItem{
   display: flex;  
   flex-direction: column;
+  flex: 1 0 31%;
+  margin-bottom: 140px;
+}
+.projectsItemBackground{
+  display: flex;
+  flex-basis: 100%;
+}
+.projectsItemImage{
+  width: 100%;
+  height: auto;
+
+}
+.projectsItemDataContainer{
+  display: flex;
+  flex-basis: 100%;
 }
 
+.projectsMainItemcontainer{
+  display: flex;
+}
+.projectsMain.projectsItem{
+  display: flex;
+  flex-basis: 100%;
+  flex-direction: row;
+  margin-bottom: 0;
+  overflow: hidden;
+}
+
+.projectsMain .projectsItemBackground{
+  flex-basis: 50%;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+}
+.projectsMain .projectsItemRight{
+  display: flex;
+  flex-basis: 50%;
+  overflow: hidden;
+  position: relative;
+}
+.projectsMain .projectsItemImage{
+  flex-basis: 100%;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  object-fit: cover;
+}
+.projectsItemMainBGContainer{
+  display: flex;
+  flex-basis: 100%;
+  align-items: center;
+  width: 100%;
+  height: 100%;  
+  z-index: 0;
+  position: absolute;
+}
+.projectsItemMainBG{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.projectsItemDataContainer{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.projectsItemData{
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+  margin-top: 40px;
+}
+.projectsItemType{
+  font-family: var(--font-robotobold);
+  font-size: 14px;
+  font-weight: 600;
+  color: #000000;  
+}
+.projectsItemContent{
+  font-family: var( --font-roboto);
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 500;
+  color: #000000;
+}
+.projectsItemName{
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 700;
+  color: #000000;
+  text-transform: uppercase;
+}
+.projectsMain .projectsItemType,
+.projectsMain .projectsItemContent
+{
+  color: #ffffff;
+}
+.projectsMain .projectsItemName{
+  color: var(--color-yellow);
+  font-size: 60px;
+  line-height: 70px;
+}
+.projectsMain .projectsItemDataContainer{
+  padding: 85px;
+  justify-content: space-between
+}
+.projectsMain .projectsItemData{
+  margin: 20px;
+}
+.projectsItemsContainer{
+  display: flex;
+}
+.projectsItemsContainer .stage{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
 
 .description {
   display: inherit;
