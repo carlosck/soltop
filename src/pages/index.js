@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Create Next App</title>
+        <title>Soltop </title>
         <meta name="description" content="soltop saltillo" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
@@ -30,22 +30,22 @@ export default function Home() {
                 />
               </div>
               <div className={`${styles.menuItems}`}>
-                <a href="#" className={`${styles.menuItem}`}>
+                <a href="#servicios" className={`${styles.menuItem}`}>
                   Servicios
                 </a>
-                <a href="#" className={`${styles.menuItem}`}>
+                <a href="#vision" className={`${styles.menuItem}`}>
                   Visión
                 </a>
-                <a href="#" className={`${styles.menuItem}`}>
+                <a href="#proyectos" className={`${styles.menuItem}`}>
                   Proyectos
                 </a>
-                <a href="#" className={`${styles.menuItem}`}>
+                <a href="#contacto" className={`${styles.menuItem}`}>
                   Contacto
                 </a>
               </div>
             </div> 
             <div className={`${styles.menuWhatsContainer}`}>
-              <div className={`${styles.menuWhats}`}>
+              <a className={`${styles.menuWhats}`} href="https://wa.me/+528440880492">
                 
                 <Image
                   src="/whatsapp_logo.png"
@@ -57,7 +57,7 @@ export default function Home() {
                 />
                 
                 <div className={`${styles.menuWhatsText}`}>844 - 088 - 0492</div>
-              </div>
+              </a>
             </div>
           </div>
         </menu>
@@ -86,7 +86,7 @@ export default function Home() {
           </div>
         </div>
         
-        <div className={`${styles.services} ${styles.section}`}>
+        <div className={`${styles.services} ${styles.section}`} id="servicios">
           
           <div className={`${styles.stage}`}>
             <ul className={`${styles.servicesItemscontainer}`}>
@@ -205,7 +205,7 @@ export default function Home() {
           </div>
           
         </div>
-        <div className={`${styles.projects} ${styles.section}`}>
+        <div className={`${styles.projects} ${styles.section}`} id="vision">
           <div className={`${styles.projectsHeader}`}>
             <div className={`${styles.projectHeaderImageContainer}`}>
               <Image
@@ -395,12 +395,14 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className={`${styles.contact} ${styles.section}`}>
-          <div className={`${styles.contactTextcontainer}`}>
-            <div className={`${styles.contactText}`}>
-              <div className={`${styles.contactTitle}`}>Trabajemos juntos</div>
-              <div className={`${styles.contactSubtitle}`}>Para poder responder de la manera más rápida y precisa posible, llene el formulario que se muestra a continuación. Los campos obligatorios están marcados con un asterisco(*) y deben completarse para permitirnos procesar su solicitud.</div>
-              <div className={`${styles.contactEmail}`}>soltopsaltillo@gmail.com</div>
+        <div className={`${styles.contact} ${styles.section}`} id="contacto">
+          <div className={`${styles.stage}`}>
+            <div className={`${styles.contactTextcontainer}`}>
+              <div className={`${styles.contactText}`}>
+                <div className={`${styles.contactTitle}`}>Trabajemos juntos</div>
+                <div className={`${styles.contactSubtitle}`}>Para poder responder de la manera más rápida y precisa posible, llene el formulario que se muestra a continuación. Los campos obligatorios están marcados con un asterisco(*) y deben completarse para permitirnos procesar su solicitud.</div>
+                <div className={`${styles.contactEmail}`}>soltopsaltillo@gmail.com</div>
+              </div>
             </div>
           </div>
         </div>
