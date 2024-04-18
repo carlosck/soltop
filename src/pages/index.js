@@ -395,22 +395,67 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className={`${styles.contact} ${styles.section}`} id="contacto">
+        <div className={`${styles.contact} ${styles.section}`}>
           <div className={`${styles.stage}`}>
+            
             <div className={`${styles.contactTextcontainer}`}>
               <div className={`${styles.contactText}`}>
-                <div className={`${styles.contactTitle}`}>Trabajemos juntos</div>
-                <div className={`${styles.contactSubtitle}`}>Para poder responder de la manera más rápida y precisa posible, llene el formulario que se muestra a continuación. Los campos obligatorios están marcados con un asterisco(*) y deben completarse para permitirnos procesar su solicitud.</div>
-                <div className={`${styles.contactEmail}`}>soltopsaltillo@gmail.com</div>
+                <div className={`${styles.contactTitle}`}>
+                  Trabajemos juntos
+                </div>
+                <div className={`${styles.contactSubtitle}`}>
+                  Para poder responder de la manera más rápida y precisa posible, llene el formulario que se muestra a continuación. Los campos obligatorios están marcados con un asterisco(*) y deben completarse para permitirnos procesar su solicitud.
+                </div>
+                <div className={`${styles.contactItemsContainer}`}>                  
+                  <a className={`${styles.contactItem}`} href="mailto:info@soltop.mx?subject=Contacto!">
+                    
+                      <Image
+                        src="/mail_icon.png"
+                        alt="Email Logo"
+                        className={styles.contactEmailIcon}
+                        width={32}
+                        height={32}
+                        priority
+                      />
+                    
+                    info@soltop.mx
+                  </a>
+                  <a className={`${styles.contactItem}`} href="https://wa.me/+528440880492">
+                    
+                      <Image
+                        src="/whatsapp_logo.png"
+                        alt="Whatsapp Logo"
+                        className={styles.contactWhatsappIcon}
+                        width={28}
+                        height={28}
+                        priority
+                      />
+                    
+                    844 - 088 - 0492
+                  </a>
+                </div>
+              </div>
+              <div className={`${styles.contactBgContainer}`}>
+                <Image
+                  src="/contact_bg.jpg"
+                  alt="Contact Background"
+                  className={styles.contactBg}
+                  width={1185}
+                  height={875}
+                />
               </div>
             </div>
           </div>
         </div>
+        
         <div className={`${styles.footer} ${styles.section}`}>
-          <div className={`${styles.footerTextcontainer}`}>
-            <div className={`${styles.footerText}`}>
-              <div className={`${styles.footerTitle}`}>Soltop</div>
-              <div className={`${styles.footerSubtitle}`}>Soluciones Topográficos </div>
+          <div className={`${styles.stage}`}>
+            <div className={`${styles.footerTextcontainer}`}>
+              <div className={`${styles.footerText}`}>
+                <div className={`${styles.footerTitle}`}>Soltop</div>
+                <div className={`${styles.footerSpacer}`} />
+                <div className={`${styles.footerSubtitle}`}>Soluciones Topográficos </div>
+              </div>
             </div>
           </div>
         </div>
