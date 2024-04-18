@@ -49,7 +49,7 @@ export default function Home() {
               </div>
             </div> 
             <div className={`${styles.menuWhatsContainer}`}>
-              <a className={`${styles.menuWhats}`} href="https://wa.me/+528440880492">
+              <a className={`${styles.menuWhats}`} href="https://wa.me/+528440880492" target="_blank" rel="noopener">
                 
                 <Image
                   src="/whats_logo.png"
@@ -424,7 +424,7 @@ export default function Home() {
                     
                     info@soltop.mx
                   </a>
-                  <a className={`${styles.contactItem}`} href="https://wa.me/+528440880492">
+                  <a className={`${styles.contactItem}`} href="https://wa.me/+528440880492" target="_blank" rel="noopener">
                     
                       <Image
                         src="/whats_logo.png"
