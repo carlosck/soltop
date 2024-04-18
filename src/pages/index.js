@@ -52,7 +52,7 @@ export default function Home() {
               <a className={`${styles.menuWhats}`} href="https://wa.me/+528440880492">
                 
                 <Image
-                  src="/whatsapp_logo.png"
+                  src="/whats_logo.png"
                   alt="WhatsApp Logo"
                   className={styles.menuWhatsIcon}
                   width={32}
@@ -427,7 +427,7 @@ export default function Home() {
                   <a className={`${styles.contactItem}`} href="https://wa.me/+528440880492">
                     
                       <Image
-                        src="/whatsapp_logo.png"
+                        src="/whats_logo.png"
                         alt="Whatsapp Logo"
                         className={styles.contactWhatsappIcon}
                         width={28}
