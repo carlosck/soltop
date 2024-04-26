@@ -408,10 +408,10 @@ export default function Home() {
                   Trabajemos juntos
                 </div>
                 <div className={`${styles.contactSubtitle}`}>
-                  Para poder responder de la manera más rápida y precisa posible, llene el formulario que se muestra a continuación. Los campos obligatorios están marcados con un asterisco(*) y deben completarse para permitirnos procesar su solicitud.
+                Para poder responder de la manera más rápida y precisa posible contáctanos via correo electrónico o whatsapp.
                 </div>
                 <div className={`${styles.contactItemsContainer}`}>                  
-                  <a className={`${styles.contactItem}`} href="mailto:info@soltop.mx?subject=Contacto!">
+                  <a className={`${styles.contactItem} ${styles.contactItemMail}`} href="mailto:info@soltop.mx?subject=Contacto!">
                     
                       <Image
                         src="/mail_icon.png"
@@ -424,10 +424,10 @@ export default function Home() {
                     
                     info@soltop.mx
                   </a>
-                  <a className={`${styles.contactItem}`} href="https://wa.me/+528440880492" target="_blank" rel="noopener">
+                  <a className={`${styles.contactItem} ${styles.contactItemWhats}` } href="https://wa.me/+528440880492" target="_blank" rel="noopener">
                     
                       <Image
-                        src="/whats_logo.png"
+                        src="/whats_logo_white.png"
                         alt="Whatsapp Logo"
                         className={styles.contactWhatsappIcon}
                         width={28}
@@ -458,7 +458,7 @@ export default function Home() {
               <div className={`${styles.footerText}`}>
                 <div className={`${styles.footerTitle}`}>Soltop</div>
                 <div className={`${styles.footerSpacer}`} />
-                <div className={`${styles.footerSubtitle}`}>Soluciones Topográficos </div>
+                <div className={`${styles.footerSubtitle}`}>Soluciones Topográficas </div>
               </div>
             </div>
           </div>

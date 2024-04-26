@@ -242,7 +242,7 @@
   flex-direction: column;
   position: relative;
   z-index: 1;
-  padding: 100px 0 107px 0;
+  padding: 100px 0 190px 0;
 }
 .projectsTitle{
   font-size: 18px;
@@ -373,6 +373,7 @@
 }
 .projectsItemsContainer{
   display: flex;
+  width: auto;
 }
 .projectsItemsContainer .stage{
   display: flex;
@@ -493,8 +494,12 @@
 .contactText{
   position: absolute;
   z-index: 2;
-  padding: 0 120px;
-  top: 200px;
+  width: 700px;
+  top: 140px;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
 }
 .contactTextcontainer{
   display: flex;
@@ -509,15 +514,16 @@
 .contactTitle{
   font-size: 60px;
   color: var(--color-yellow);
-  text-align: left;
+  text-align: center;
 }
 .contactSubtitle{
   font-size: 16px;
   font-family: var(--font-roboto);
   color: var(--color-blue);
-  text-align: left;
+  text-align: center;
   font-weight: 600;
   margin-top: 13px;
+  max-width: 500px;
 }
 .contactItemsContainer{
   display: flex;
@@ -535,10 +541,16 @@
   gap: 1rem;
   width: 100%;
   max-width: 300px;
-  padding: 20px;
-  background-color: #ffffff;
-  border: 1px solid var(--color-pampas);
-  border-radius: 12px;
+  padding: 11px;
+  font-weight: 700;   
+  
+}
+.contactItemMail{
+  background-color: var(--color-yellow);
+}
+.contactItemWhats{
+  color: #ffffff;
+  background-color: #0ed561;
 }
 .contactItem:hover{  
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -592,6 +604,7 @@
   color: #ffffff;
   font-weight: 400;
   font-family: var(--font-roboto);
+  text-transform: uppercase;
 }
 /* Enable hover only on non-touch devices */
 @media (hover: hover) and (pointer: fine) {
@@ -707,17 +720,18 @@
     max-width: 1024px;
   }
   .menu{
-    padding: 5px 15px;
+    padding: 15px 15px;
   }
   .menuItems{
     display: none;
   }
   .menuLogo{
-    width: 110px;
+    width: 160px;
     height: auto;
   }
   .menuWhats{
     padding: 3px 5px;
+    display: none;
   }
   .menuWhatsIcon{
     width: 15px;
@@ -727,16 +741,33 @@
   .menuWhatsText{
     font-size: 14px;    
   }
+  .heroImageContainer{
+    position: relative;    
+  }
+  .heroImage{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    object-position: 60%;
+  }
+  .hero{
+    position: relative;
+    height: auto;
+    margin-top: 50px;
+  }
   .heroText{
-    flex-basis: 100%;
+    flex-basis: 79%;
     padding: 0 20px;
     max-width: 500px;
+    padding-bottom: 50px;
   }
   .heroTitle{
-    font-size: 20px;
-    line-height: 30px;
-    text-align: center;
-    margin-top: 0;
+    font-size: 27px;
+    line-height: 35px;
+    text-align: left;
+    margin-top: 90px;
+    
   }
   .hero .stage{
     justify-content: center;
@@ -745,32 +776,39 @@
     font-size: 14px;
     line-height: 20px;
     padding-right: 0;
-    text-align: center;
+    text-align: left;
     margin-top: 20px;
   }
   .servicesItemscontainer{
     flex-wrap: wrap;
-    justify-content: space-evenly;
-    margin-top: -30px;
+    justify-content: space-between;
+    margin-top: -25px;
+    padding: 0 15px;
   }
   .servicesItem{
-    height: 180px;
-    width: 180px;
-    padding: 20px;
+    height: 145px;
+    width: 145px;
+    padding: 15px;
     flex-basis: auto;
-    margin-bottom: 15px;
+        
   }
   .servicesItemTitle{
-    font-size: 18px;
+    font-size: 15px;
     line-height: 25px;
+    margin-top: 0.5rem;
   }
   .servicesItemIcon{
-    width: 30px;
-    height: 30px;
+    width: 35px;
+    height: 35px;
   }
 
   .servicesImageContainer{
     flex-direction: column-reverse;
+  }
+  .servicesImage{
+    transform: scale(1.5) translateX(10%);
+    padding-bottom: 40px;
+    margin-top: 20px;
   }
   .services .stage{
     position: relative;
@@ -780,21 +818,23 @@
     padding: 25px;
   }
   .servicesTitle{
-    font-size: 30px;
+    font-size: 27px;
     line-height: 32px;
     padding-right: 0;
+    text-align: center;
   }
   .servicesSubtitle{
     font-size: 14px;
     line-height: 20px;
     padding-right: 0;
     margin-top: 20px;
+    text-align: center;
   }
   .projects .stage{
-    padding: 50px 0 50px 0;
+    padding: 50px 15px 50px ;
   }
   .projectsSubtitle{
-    font-size: 30px;
+    font-size: 27px;
     line-height: 35px;
   }
   .projectsMain.projectsItem{
@@ -804,19 +844,60 @@
     width: 100%;
     max-width: 100%;
   }
+  .projectsItemMainBG{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
   .projectsMain.projectsItem .projectsItemDataContainer{
-    padding: 20px;
+    padding: 15px 15px 50px;
+  }
+  .projectsMain.projectsItem .projectsItemRight{
+    flex-basis: auto;
+  }
+  .projectsMain.projectsItem .projectsItemData{
+    margin: 20px 0;
+  }
+  .projectsMain.projectsItem .projectsItemImage{
+    width: 100%;
+    height: 340px;
+    position: relative;
+    object-fit: cover;
+  }
+  .projectsMain.projectsItem .projectsItemBackground{
+    flex-basis: auto;
+  }
+  .projectsMain.projectsItem .projectsItemName{
+    font-size: 40px;
+    line-height: 50px;
+  }
+  
+  .projectsItemsContainer{
+    width: 100%;
   }
   .projectsItemsContainer .stage{
-    justify-content: space-evenly;
+    justify-content: space-between;
     gap: 0;
     align-items: flex-start;
+    padding-top: 10px;
   }
   .projectsItem{
-    width: 200px;
+    width: 135px;
     flex-basis: auto;
     margin-bottom: 20px;
-    max-width: 200px;
+    max-width: 135px;
+  }
+  .projectsItemType{
+    font-size: 14px;
+    line-height: 20px;
+    margin-bottom: 5px;
+  }
+  .projectsItemData{
+    margin-top: 20px;
+  }
+  .projectsItemName{
+    font-size: 19px;
+    line-height: 25px;
   }
   .contact{
     overflow: hidden;
@@ -831,6 +912,37 @@
     position: relative;
     top: 0;
     padding: 50px 25px;
+    width: auto;
   }
+  .contactTitle{
+    font-family: var(--font-avenirbold);
+    font-size: 27px;
+    font-weight: 700;
+    line-height: 35px;
+    text-align: center;
+  }
+  .contactSubtitle{
+    font-size: 14px;
+    text-align: center;
+  }
+  .contactItemsContainer{
+    margin-top: 50px;
+  }
+  .contactBgContainer{
+    width: 100%;
+    height: 100%;
+  }
+  .contactBg{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    object-fit: cover;
+    object-position: initial;
+    min-height: 100%;
+  }
+  .footerTitle{
+    font-size: 18px;
+  }
+
 }
 
