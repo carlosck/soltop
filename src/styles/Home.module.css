@@ -102,6 +102,7 @@
 }
 .heroTitle{
   font-size: 82px;
+  font-family: var(--font-avenir);
   line-height: 90px;
   font-weight: 700;
   color: #ffffff;  
@@ -179,6 +180,7 @@
 }
 .servicesTitle{
   font-size: 60px;
+  font-family: var(--font-avenir);
   line-height: 60px;
   font-weight: 700;
   color: var(--color-blue);
@@ -251,6 +253,7 @@
 }
 .projectsSubtitle{
   font-size: 60px;
+  font-family: var(--font-avenir);
   line-height: 75px;
   font-weight: 700;
   color: #ffffff;
@@ -513,6 +516,7 @@
 }
 .contactTitle{
   font-size: 60px;
+  font-family: var(--font-avenir);
   color: var(--color-yellow);
   text-align: center;
 }
@@ -915,7 +919,7 @@
     width: auto;
   }
   .contactTitle{
-    font-family: var(--font-avenirbold);
+    font-family: var(--font-avenir);
     font-size: 27px;
     font-weight: 700;
     line-height: 35px;
@@ -944,5 +948,43 @@
     font-size: 18px;
   }
 
+}
+@media (max-width: 900px){
+  .servicesItem{
+    width: 20%;
+  }
+  .projectsItem{
+    width: 19%;    
+    max-width: 19%;
+  }
+}
+@media (max-width: 756px){
+  .servicesItem{
+    width: 25%;
+  }
+  .projectsItem{
+    width: 24%;    
+    max-width: 24%;
+  }
+}
+
+@media (max-width: 610px){
+  .servicesItem{
+    width: 33%;
+  }
+  .projectsItem{
+    width: 33%;    
+    max-width: 33%;
+  }
+}
+
+@media (max-width: 465px){
+  .servicesItem{
+    width: 50%;
+  }
+  .projectsItem{
+    width: 49%;    
+    max-width: 49%;
+  }
 }
 
