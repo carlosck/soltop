@@ -1,14 +1,174 @@
+import { useState, useCallback } from "react";
 import Head from "next/head";
 import Image from "next/image";
 import { Inter } from "next/font/google";
 import styles from "@/styles/Home.module.css";
 import ReactGA from "react-ga4";
+import Lightbox from "yet-another-react-lightbox";
+
+import "yet-another-react-lightbox/styles.css";
+import NextJsImage from "./NextJsImage";
 ReactGA.initialize("G-PNN17KL6QD");
 
-const inter = Inter({ subsets: ["latin"] });
+
 
 
 export default function Home() {
+  
+  const [data, setData] = useState({
+    loading: true,
+    openControl: false,
+    openDeslindes: false,
+    openEscaner3D: false,
+    openFotogrametria: false,
+    openLevantamientos: false,
+    openRasantes: false,
+    openSupervision: false,
+
+    
+  });
+
+  const changeParamsData = useCallback(async params => {
+    console.log('changeParamsData data',data)
+    return (async () => {
+      setData(state => ({
+        ...state,
+        ...params
+      }));
+    })();
+    // eslint-disable-next-line
+  }, [data]);
+
+  const slidesControl = [
+    {
+      src: "/popups/control-tierra-01.jpg",
+      width: 1920,
+      height: 665,
+    },
+    {
+      src: "/popups/control-tierra-02.jpg",
+      width: 1920,
+      height: 880,
+    },    
+  ];
+  const slidesDeslindes = [
+    {
+      src: "/popups/deslindes-01.jpg",
+      width: 901,
+      height: 1080,
+    },
+    {
+      src: "/popups/control-tierra-02.jpg",
+      width: 1154,
+      height: 1080,
+    },
+    {
+      src: "/popups/control-tierra-03.jpg",
+      width: 899,
+      height: 1080,
+    },
+    {
+      src: "/popups/control-tierra-04.jpg",
+      width: 897,
+      height: 1080,
+    },    
+  ];
+  const slidesEscaner3D = [
+    {
+      src: "/popups/escaner3d-01.jpg",
+      width: 682,
+      height: 1080,
+    },
+    {
+      src: "/popups/escaner3d-01.jpg",
+      width: 681,
+      height: 1080,
+    },      
+  ];
+  const slidesFotogrametria = [
+    {
+      src: "/popups/fotogrametria-01.jpg",
+      width: 1137,
+      height: 1080,
+    },
+    {
+      src: "/popups/fotogrametria-02.jpg",
+      width: 1070,
+      height: 1080,
+    },
+    {
+      src: "/popups/fotogrametria-03.jpg",
+      width: 1920,
+      height: 984,
+    },
+    {
+      src: "/popups/fotogrametria-04.jpg",
+      width: 1920,
+      height: 958,
+    },      
+  ];
+  const slidesLevantamientos = [
+    {
+      src: "/popups/levantamientos-01.jpg",
+      width: 915,
+      height: 1080,
+    },
+    {
+      src: "/popups/levantamientos-02.jpg",
+      width: 917,
+      height: 1080,
+    },
+    {
+      src: "/popups/levantamientos-03.jpg",
+      width: 918,
+      height: 1080,
+    },
+    {
+      src: "/popups/levantamientos-04.jpg",
+      width: 907,
+      height: 1080,
+    },      
+  ];
+
+  const slidesRasantes = [
+    {
+      src: "/popups/rasantes-01.jpg",
+      width: 1920,
+      height: 1080,
+    },
+    {
+      src: "/popups/rasantes-02.jpg",
+      width: 1920,
+      height: 879,
+    },
+    {
+      src: "/popups/rasantes-03.jpg",
+      width: 1920,
+      height: 663,
+    },        
+  ];
+  const slidesSupervision = [
+    {
+      src: "/popups/supervision-01.jpg",
+      width: 1614,
+      height: 1080,
+    },
+    {
+      src: "/popups/supervision-02.jpg",
+      width: 902,
+      height: 1080,
+    },
+    {
+      src: "/popups/supervision-03.jpg",
+      width: 685,
+      height: 1080,
+    },
+    {
+      src: "/popups/supervision-04.jpg",
+      width: 680,
+      height: 1080,
+    },        
+  ];
   return (
     <>
       <Head>
@@ -19,6 +179,49 @@ export default function Home() {
               
       </Head>
       <main className={`${styles.main}`}>
+      <Lightbox
+        open={data.openSupervision}
+        close={() => changeParamsData({openSupervision:false})}
+        slides={slidesSupervision}
+        render={{ slide: NextJsImage }}
+      />
+      <Lightbox
+        open={data.openLevantamientos}
+        close={() => changeParamsData({openLevantamientos:false})}
+        slides={slidesLevantamientos}
+        render={{ slide: NextJsImage }}
+      />
+      <Lightbox
+        open={data.openDeslindes}
+        close={() => changeParamsData({openDeslindes:false})}
+        slides={slidesDeslindes}
+        render={{ slide: NextJsImage }}
+      />
+      <Lightbox
+        open={data.openFotogrametria}
+        close={() => changeParamsData({openFotogrametria:false})}
+        slides={slidesFotogrametria}
+        render={{ slide: NextJsImage }}
+      />
+      <Lightbox
+        open={data.openRasantes}
+        close={() => changeParamsData({openRasantes:false})}
+        slides={slidesRasantes}
+        render={{ slide: NextJsImage }}
+      />
+      <Lightbox
+        open={data.openControl}
+        close={() => changeParamsData({openControl:false})}
+        slides={slidesControl}
+        render={{ slide: NextJsImage }}
+      />
+
+      <Lightbox
+        open={data.openEscaner3D}
+        close={() => setOpenEscaner3D(false)}
+        slides={slidesEscaner3D}
+        render={{ slide: NextJsImage }}
+      />
         <menu className={`${styles.menu}`}>
           <div className={`${styles.stage}`}>
             <div className={`${styles.menuLeft}`}>
@@ -94,7 +297,7 @@ export default function Home() {
           
           <div className={`${styles.stage}`}>
             <ul className={`${styles.servicesItemscontainer}`}>
-              <li className={`${styles.servicesItem}`}>
+              <li className={`${styles.servicesItem}`} onClick={() => changeParamsData({openSupervision: true})}>
                 <div className={`${styles.servicesItemIconContainer}`}>
                   <Image
                     src="/servicios_logo.png"
@@ -107,7 +310,7 @@ export default function Home() {
                 </div>
                 <div className={`${styles.servicesItemTitle}`}>Supervisión de Proyectos</div>              
               </li>
-              <li className={`${styles.servicesItem}`}>
+              <li className={`${styles.servicesItem}`} onClick={() => changeParamsData({openLevantamientos: true})}>
                 <div className={`${styles.servicesItemIconContainer}`}>
                   <Image
                     src="/servicios_logo.png"
@@ -120,7 +323,7 @@ export default function Home() {
                 </div>
                 <div className={`${styles.servicesItemTitle}`}>Levantamientos Topográficos</div>              
               </li>
-              <li className={`${styles.servicesItem}`}>
+              <li className={`${styles.servicesItem}`} onClick={() => changeParamsData({openDeslindes: true})}>
                 <div className={`${styles.servicesItemIconContainer}`}>
                   <Image
                     src="/servicios_logo.png"
@@ -133,7 +336,7 @@ export default function Home() {
                 </div>
                 <div className={`${styles.servicesItemTitle}`}>Deslindes de Predios</div>              
               </li>
-              <li className={`${styles.servicesItem}`}>
+              <li className={`${styles.servicesItem}`} onClick={() => changeParamsData({openFotogrametria: true})}>
                 <div className={`${styles.servicesItemIconContainer}`}>
                   <Image
                     src="/servicios_logo.png"
@@ -146,7 +349,7 @@ export default function Home() {
                 </div>
                 <div className={`${styles.servicesItemTitle}`}>Fotogrametría</div>              
               </li>
-              <li className={`${styles.servicesItem}`}>
+              <li className={`${styles.servicesItem}`} onClick={() => changeParamsData({openRasantes: true})}>
                 <div className={`${styles.servicesItemIconContainer}`}>
                   <Image
                     src="/servicios_logo.png"
@@ -159,7 +362,7 @@ export default function Home() {
                 </div>
                 <div className={`${styles.servicesItemTitle}`}>Proyectos de Rasantes</div>              
               </li>
-              <li className={`${styles.servicesItem}`}>
+              <li className={`${styles.servicesItem}`} onClick={() => changeParamsData({openControl: true})}>
                 <div className={`${styles.servicesItemIconContainer}`}>
                   <Image
                     src="/servicios_logo.png"
@@ -172,7 +375,7 @@ export default function Home() {
                 </div>
                 <div className={`${styles.servicesItemTitle}`}>Control de Movimientos de Tierra</div>              
               </li>
-              <li className={`${styles.servicesItem}`}>
+              <li className={`${styles.servicesItem}`} onClick={() => setOpenEscaner3D(true)}>
                 <div className={`${styles.servicesItemIconContainer}`}>
                   <Image
                     src="/servicios_logo.png"
@@ -208,6 +411,24 @@ export default function Home() {
             
           </div>
           
+        </div>
+        <div className={`${styles.mision} ${styles.section}`} id="mision">
+          <div className={`${styles.misionImageContainer}`}>
+            <Image
+              src="/mision_bg.jpg"
+              alt="Mision Background"
+              className={styles.misionImage}
+              width={1366}
+              height={765}
+            />
+            <div className={`${styles.misionImageShadow}`} />
+          </div>
+          <div className={`${styles.stage}`}>
+              <h2 className={`${styles.misionTitle}`}>Misión</h2>
+              <div className={`${styles.misionContent}`}>Garantizar soluciones eficientes y efectivas para la gestión de tierras, construcción y planificación urbana.</div>
+              <div className={`${styles.misionSubtitle}`}>Proporcionamos servicios de topografía de la más alta calidad y precisión a nuestros clientes, utilizando tecnología de punta y metodología innovadora</div>
+            </div>
+
         </div>
         <div className={`${styles.projects} ${styles.section}`} id="vision">
           <div className={`${styles.projectsHeader}`}>

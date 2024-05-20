@@ -159,6 +159,10 @@
   border: 1px solid var(--color-pampas);
   padding: 32px;
   flex-direction: column;
+  cursor: pointer;
+}
+.servicesItem:hover .servicesItemIcon{
+  scale: 1.1;
 }
 
 .servicesItemTitle{
@@ -246,6 +250,66 @@
   z-index: 1;
   padding: 100px 0 190px 0;
 }
+.mision{
+  align-items: normal;  
+}
+.mision .stage{
+  padding: 180px 0;
+}
+.misionTitle{
+  font-size: 18px;
+  color: #ffffff;
+  text-align: center;
+}
+.misionContent{
+  font-size: 60px;
+  font-family: var(--font-avenir);
+  line-height: 60px;
+  font-weight: 700;
+  color: #f5be18;
+  text-align: center;
+  margin-top: 1rem;
+}
+.misionSubtitle{
+  font-size: 18px;
+  font-family: var(--font-roboto);
+  line-height: 25px;
+  font-weight: 500;
+  color: #e0e9ed;
+  text-align: center;
+  margin-top: 2rem;
+  padding: 0 80px;
+}
+.misionImageContainer{
+  flex-basis: 100%;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: 0;
+}
+.misionImage{
+  flex-basis: 100%;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  object-fit: cover;
+}
+.misionImageShadow{
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  background-color: rgba( 0,0,0, 0.8);
+  position: absolute;
+}
+.mision .stage{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
 .projectsTitle{
   font-size: 18px;
   color: #ffffff;
@@ -260,6 +324,7 @@
   text-align: center;
   margin-top: 1rem;
 }
+
 
 .projectsItem{
   display: flex;  
@@ -804,6 +869,7 @@
   .servicesItemIcon{
     width: 35px;
     height: 35px;
+    transition: all 0.5s ease-in-out;
   }
 
   .servicesImageContainer{
@@ -833,6 +899,17 @@
     padding-right: 0;
     margin-top: 20px;
     text-align: center;
+  }
+  .mision .stage{
+    padding: 80px 0;
+  }
+  .misionContent{
+    font-size: 27px;
+    line-height: 35px;
+  }
+  .misionSubtitle{
+    font-size: 16px;
+    line-height: 22px;
   }
   .projects .stage{
     padding: 50px 15px 50px ;
