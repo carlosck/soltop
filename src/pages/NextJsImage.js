@@ -8,7 +8,7 @@ import {
   Slide,
 } from "yet-another-react-lightbox";
 
-function isNextJsImage(slide: Slide): slide is StaticImageData {
+function isNextJsImage(slide) {
   return (
     isImageSlide(slide) &&
     typeof slide.width === "number" &&
@@ -16,7 +16,7 @@ function isNextJsImage(slide: Slide): slide is StaticImageData {
   );
 }
 
-export default function NextJsImage({ slide, offset, rect }: RenderSlideProps) {
+export default function NextJsImage({ slide, offset, rect }) {
   const {
     on: { click },
     carousel: { imageFit },
