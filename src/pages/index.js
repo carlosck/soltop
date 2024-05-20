@@ -40,18 +40,7 @@ export default function Home() {
     // eslint-disable-next-line
   }, [data]);
 
-  /* const slidesControl = [
-    {
-      src: "/popups/control-tierra-01.jpg",
-      width: 1920,
-      height: 665,
-    },
-    {
-      src: "/popups/control-tierra-02.jpg",
-      width: 1920,
-      height: 880,
-    },    
-  ]; */
+  
   const slidesControl = [
     "/popups/control-tierra-01.jpg",
     "/popups/control-tierra-02.jpg",
@@ -59,122 +48,41 @@ export default function Home() {
         
   
   const slidesDeslindes = [
-    {
-      src: "/popups/deslindes-01.jpg",
-      width: 901,
-      height: 1080,
-    },
-    {
-      src: "/popups/control-tierra-02.jpg",
-      width: 1154,
-      height: 1080,
-    },
-    {
-      src: "/popups/control-tierra-03.jpg",
-      width: 899,
-      height: 1080,
-    },
-    {
-      src: "/popups/control-tierra-04.jpg",
-      width: 897,
-      height: 1080,
-    },    
-  ];
+    "/popups/deslindes-01.jpg",
+    "/popups/deslindes-02.jpg",
+    "/popups/deslindes-03.jpg",
+    "/popups/deslindes-04.jpg",
+    
+  ]
+    
   const slidesEscaner3D = [
-    {
-      src: "/popups/escaner3d-01.jpg",
-      width: 682,
-      height: 1080,
-    },
-    {
-      src: "/popups/escaner3d-01.jpg",
-      width: 681,
-      height: 1080,
-    },      
+    "/popups/escaner3d-01.jpg",
+    "/popups/escaner3d-02.jpg",
+    
   ];
   const slidesFotogrametria = [
-    {
-      src: "/popups/fotogrametria-01.jpg",
-      width: 1137,
-      height: 1080,
-    },
-    {
-      src: "/popups/fotogrametria-02.jpg",
-      width: 1070,
-      height: 1080,
-    },
-    {
-      src: "/popups/fotogrametria-03.jpg",
-      width: 1920,
-      height: 984,
-    },
-    {
-      src: "/popups/fotogrametria-04.jpg",
-      width: 1920,
-      height: 958,
-    },      
+    "/popups/fotogrametria-01.jpg",
+    "/popups/fotogrametria-02.jpg",
+    "/popups/fotogrametria-03.jpg",
+    "/popups/fotogrametria-04.jpg",    
   ];
   const slidesLevantamientos = [
-    {
-      src: "/popups/levantamientos-01.jpg",
-      width: 915,
-      height: 1080,
-    },
-    {
-      src: "/popups/levantamientos-02.jpg",
-      width: 917,
-      height: 1080,
-    },
-    {
-      src: "/popups/levantamientos-03.jpg",
-      width: 918,
-      height: 1080,
-    },
-    {
-      src: "/popups/levantamientos-04.jpg",
-      width: 907,
-      height: 1080,
-    },      
+    "/popups/levantamientos-01.jpg",
+    "/popups/levantamientos-02.jpg",
+    "/popups/levantamientos-03.jpg",
+    "/popups/levantamientos-04.jpg",  
   ];
 
   const slidesRasantes = [
-    {
-      src: "/popups/rasantes-01.jpg",
-      width: 1920,
-      height: 1080,
-    },
-    {
-      src: "/popups/rasantes-02.jpg",
-      width: 1920,
-      height: 879,
-    },
-    {
-      src: "/popups/rasantes-03.jpg",
-      width: 1920,
-      height: 663,
-    },        
+    "/popups/rasantes-01.jpg",
+    "/popups/rasantes-02.jpg",
+    "/popups/rasantes-03.jpg",     
   ];
   const slidesSupervision = [
-    {
-      src: "/popups/supervision-01.jpg",
-      width: 1614,
-      height: 1080,
-    },
-    {
-      src: "/popups/supervision-02.jpg",
-      width: 902,
-      height: 1080,
-    },
-    {
-      src: "/popups/supervision-03.jpg",
-      width: 685,
-      height: 1080,
-    },
-    {
-      src: "/popups/supervision-04.jpg",
-      width: 680,
-      height: 1080,
-    },        
+    "/popups/supervision-01.jpg",
+    "/popups/supervision-02.jpg",
+    "/popups/supervision-03.jpg",
+    "/popups/supervision-04.jpg",      
   ];
   return (
     <>
@@ -186,11 +94,33 @@ export default function Home() {
               
       </Head>
       <main className={`${styles.main}`}>
-      
-      <FsLightbox
-        toggler={data.openControl}
-        sources={slidesControl}
-        
+        <FsLightbox
+          toggler={data.openSupervision}
+          sources={slidesSupervision}
+        />
+        <FsLightbox
+          toggler={data.openLevantamientos}
+          sources={slidesLevantamientos}
+        />
+        <FsLightbox
+          toggler={data.openDeslindes}
+          sources={slidesDeslindes}
+        />
+        <FsLightbox
+          toggler={data.openFotogrametria}
+          sources={slidesFotogrametria}
+        />
+        <FsLightbox
+          toggler={data.openRasantes}
+          sources={slidesRasantes}
+        />
+        <FsLightbox
+          toggler={data.openControl}
+          sources={slidesControl}
+        />
+        <FsLightbox
+        toggler={data.openEscaner3D}
+        sources={slidesEscaner3D}
       />
 
       
