@@ -277,7 +277,7 @@ export default function Home() {
                 </div>
                 <div className={`${styles.servicesItemTitle}`}>Control de Movimientos de Tierra</div>              
               </li>
-              <li className={`${styles.servicesItem}`} onClick={() => setOpenEscaner3D(true)}>
+              <li className={`${styles.servicesItem}`} onClick={() => changeParamsData({openEscaner3D: true})}>
                 <div className={`${styles.servicesItemIconContainer}`}>
                   <Image
                     src="/servicios_logo.png"
