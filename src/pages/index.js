@@ -6,8 +6,9 @@ import styles from '../styles/Home.module.css';
 import ReactGA from "react-ga4";
 import Lightbox from "yet-another-react-lightbox";
 
-import "yet-another-react-lightbox/styles.css";
-import NextJsImage from "./NextJsImage";
+//import "yet-another-react-lightbox/styles.css";
+//import NextJsImage from "./NextJsImage";
+import FsLightbox from "fslightbox-react";
 ReactGA.initialize("G-PNN17KL6QD");
 
 
@@ -39,7 +40,7 @@ export default function Home() {
     // eslint-disable-next-line
   }, [data]);
 
-  const slidesControl = [
+  /* const slidesControl = [
     {
       src: "/popups/control-tierra-01.jpg",
       width: 1920,
@@ -50,7 +51,13 @@ export default function Home() {
       width: 1920,
       height: 880,
     },    
+  ]; */
+  const slidesControl = [
+    "/popups/control-tierra-01.jpg",
+    "/popups/control-tierra-02.jpg",
   ];
+        
+  
   const slidesDeslindes = [
     {
       src: "/popups/deslindes-01.jpg",
@@ -179,49 +186,14 @@ export default function Home() {
               
       </Head>
       <main className={`${styles.main}`}>
-      <Lightbox
-        open={data.openSupervision}
-        close={() => changeParamsData({openSupervision:false})}
-        slides={slidesSupervision}
-        render={{ slide: NextJsImage }}
-      />
-      <Lightbox
-        open={data.openLevantamientos}
-        close={() => changeParamsData({openLevantamientos:false})}
-        slides={slidesLevantamientos}
-        render={{ slide: NextJsImage }}
-      />
-      <Lightbox
-        open={data.openDeslindes}
-        close={() => changeParamsData({openDeslindes:false})}
-        slides={slidesDeslindes}
-        render={{ slide: NextJsImage }}
-      />
-      <Lightbox
-        open={data.openFotogrametria}
-        close={() => changeParamsData({openFotogrametria:false})}
-        slides={slidesFotogrametria}
-        render={{ slide: NextJsImage }}
-      />
-      <Lightbox
-        open={data.openRasantes}
-        close={() => changeParamsData({openRasantes:false})}
-        slides={slidesRasantes}
-        render={{ slide: NextJsImage }}
-      />
-      <Lightbox
-        open={data.openControl}
-        close={() => changeParamsData({openControl:false})}
-        slides={slidesControl}
-        render={{ slide: NextJsImage }}
+      
+      <FsLightbox
+        toggler={data.openControl}
+        sources={slidesControl}
+        
       />
 
-      <Lightbox
-        open={data.openEscaner3D}
-        close={() => setOpenEscaner3D(false)}
-        slides={slidesEscaner3D}
-        render={{ slide: NextJsImage }}
-      />
+      
         <menu className={`${styles.menu}`}>
           <div className={`${styles.stage}`}>
             <div className={`${styles.menuLeft}`}>
