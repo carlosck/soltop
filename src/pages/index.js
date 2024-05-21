@@ -295,7 +295,7 @@ export default function Home() {
             
             
           </div>
-          <div className={`${styles.servicesImageContainer}`}>
+          <div className={`${styles.servicesImageContainer}`} id="vision">
             <Image
               src="/services_background.png"
               alt="Services Background"
