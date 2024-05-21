@@ -5,6 +5,8 @@ import { Inter } from "next/font/google";
 import styles from '../styles/Home.module.css';
 import ReactGA from "react-ga4";
 import Lightbox from "yet-another-react-lightbox";
+import SoltopLogo from '../components/SoltopLogo';
+import WhatsAppLogo from "../components/WhatsLogo";
 
 //import "yet-another-react-lightbox/styles.css";
 //import NextJsImage from "./NextJsImage";
@@ -129,13 +131,10 @@ export default function Home() {
             <div className={`${styles.menuLeft}`}>
                      
               <div className={`${styles.menuLogoContainer}`}>
-                <Image
-                  src="/soltop_logo.png"
-                  alt="Soltop Logo"
+                <SoltopLogo
                   className={styles.menuLogo}
-                  width={160}
-                  height={38}
-                  priority
+                  width={82}
+                  height={55}                  
                 />
               </div>
               <div className={`${styles.menuItems}`}>
@@ -144,6 +143,9 @@ export default function Home() {
                 </a>
                 <a href="#vision" className={`${styles.menuItem}`}>
                   Visión
+                </a>
+                <a href="#mision" className={`${styles.menuItem}`}>
+                  Mision
                 </a>
                 <a href="#proyectos" className={`${styles.menuItem}`}>
                   Proyectos
@@ -156,12 +158,11 @@ export default function Home() {
             <div className={`${styles.menuWhatsContainer}`}>
               <a className={`${styles.menuWhats}`} href="https://wa.me/+528440880492" target="_blank" rel="noopener">
                 
-                <Image
-                  src="/whats_logo.png"
+                <WhatsAppLogo                  
                   alt="WhatsApp Logo"
                   className={styles.menuWhatsIcon}
-                  width={32}
-                  height={32}
+                  width={30}
+                  height={30}
                   priority
                 />
                 
@@ -317,13 +318,12 @@ export default function Home() {
         <div className={`${styles.mision} ${styles.section}`} id="mision">
           <div className={`${styles.misionImageContainer}`}>
             <Image
-              src="/mision_bg.jpg"
+              src="/img-soltop-mision.jpg"
               alt="Mision Background"
               className={styles.misionImage}
-              width={1366}
+              width={1920}
               height={765}
-            />
-            <div className={`${styles.misionImageShadow}`} />
+            />            
           </div>
           <div className={`${styles.stage}`}>
               <h2 className={`${styles.misionTitle}`}>Misión</h2>
@@ -332,7 +332,7 @@ export default function Home() {
             </div>
 
         </div>
-        <div className={`${styles.projects} ${styles.section}`} id="vision">
+        <div className={`${styles.projects} ${styles.section}`} id="proyectos">
           <div className={`${styles.projectsHeader}`}>
             <div className={`${styles.projectHeaderImageContainer}`}>
               <Image
@@ -522,7 +522,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className={`${styles.contact} ${styles.section}`}>
+        <div className={`${styles.contact} ${styles.section}`} id="contacto">
           <div className={`${styles.stage}`}>
             
             <div className={`${styles.contactTextcontainer}`}>
@@ -549,14 +549,13 @@ export default function Home() {
                   </a>
                   <a className={`${styles.contactItem} ${styles.contactItemWhats}` } href="https://wa.me/+528440880492" target="_blank" rel="noopener">
                     
-                      <Image
-                        src="/whats_logo_white.png"
-                        alt="Whatsapp Logo"
-                        className={styles.contactWhatsappIcon}
-                        width={28}
-                        height={28}
-                        priority
-                      />
+                  <WhatsAppLogo
+                    alt="WhatsApp Logo"
+                    className={styles.contactWhatsIcon}
+                    width={30}
+                    height={30}
+                    priority
+                  />
                     
                     844 - 088 - 0492
                   </a>
