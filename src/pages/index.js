@@ -32,7 +32,7 @@ export default function Home() {
   });
 
   const changeParamsData = useCallback(async params => {
-    console.log('changeParamsData data',data)
+    
     return (async () => {
       setData(state => ({
         ...state,
