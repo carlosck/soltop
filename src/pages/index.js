@@ -200,8 +200,7 @@ export default function Home() {
           
           <div className={`${styles.stage}`}>
             <ul className={`${styles.servicesItemscontainer}`}>
-              <li className={`${styles.servicesItem}`} onClick={() => changeParamsData({openSupervision: !data.openSupervision})}>
-                <div className={`${styles.servicesItemClickContainer}`} />
+              <li className={`${styles.servicesItem}`} onClick={() => changeParamsData({openSupervision: !data.openSupervision})}>                
                 <div className={`${styles.servicesItemIconContainer}`}>
                   <Image
                     src="/servicios_logo.png"
