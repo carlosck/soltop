@@ -156,7 +156,7 @@ export default function Home() {
               </div>
             </div> 
             <div className={`${styles.menuWhatsContainer}`}>
-              <a className={`${styles.menuWhats}`} href="https://wa.me/+528440880492" target="_blank" rel="noopener">
+              <a className={`${styles.menuWhats}`} href="https://wa.me/+528441737994" target="_blank" rel="noopener">
                 
                 <WhatsAppLogo                  
                   alt="WhatsApp Logo"
@@ -166,7 +166,7 @@ export default function Home() {
                   priority
                 />
                 
-                <div className={`${styles.menuWhatsText}`}>844 - 088 - 0492</div>
+                <div className={`${styles.menuWhatsText}`}>844 - 173- 7994</div>
               </a>
             </div>
           </div>
@@ -540,7 +540,7 @@ export default function Home() {
                 Para poder responder de la manera más rápida y precisa posible contáctanos via correo electrónico o whatsapp.
                 </div>
                 <div className={`${styles.contactItemsContainer}`}>                  
-                  <a className={`${styles.contactItem} ${styles.contactItemMail}`} href="mailto:info@soltop.mx?subject=Contacto!">
+                  <a className={`${styles.contactItem} ${styles.contactItemMail}`} href="mailto:infosoltop@gmail.com?subject=Contacto!">
                     
                       <Image
                         src="/mail_icon.png"
@@ -551,9 +551,9 @@ export default function Home() {
                         priority
                       />
                     
-                    info@soltop.mx
+                    infosoltop@gmail.com
                   </a>
-                  <a className={`${styles.contactItem} ${styles.contactItemWhats}` } href="https://wa.me/+528440880492" target="_blank" rel="noopener">
+                  <a className={`${styles.contactItem} ${styles.contactItemWhats}` } href="https://wa.me/+528441737994" target="_blank" rel="noopener">
                     
                   <WhatsAppLogo
                     alt="WhatsApp Logo"
