@@ -106,7 +106,7 @@
 }
 .heroTitle{
   font-size: 82px;
-  font-family: var(--font-avenir);
+  font-family: avenir_nextdemi_bold;
   line-height: 90px;
   font-weight: 700;
   color: #ffffff;  
@@ -118,7 +118,7 @@
   font-weight: 400;
   color: #ffffff;  
   margin-top: 50px;
-  font-family: var(--font-roboto);
+  font-family: robotobold;
   padding-right: 90px;
   
 
@@ -189,14 +189,14 @@
 }
 .servicesTitle{
   font-size: 60px;
-  font-family: var(--font-avenir);
+  font-family: avenir_nextdemi_bold;
   line-height: 60px;
   font-weight: 700;
   color: var(--color-blue);
   padding-right: 23px;
 }
 .servicesSubtitle{
-  font-family: var(--font-roboto);
+  font-family: robotobold;
   font-size: 18px;
   line-height: 24px;
   font-weight: 400;
@@ -268,7 +268,7 @@
 }
 .misionContent{
   font-size: 60px;
-  font-family: var(--font-avenir);
+  font-family: avenir_nextdemi_bold;
   line-height: 60px;
   font-weight: 700;
   color: #f5be18;
@@ -277,7 +277,7 @@
 }
 .misionSubtitle{
   font-size: 18px;
-  font-family: var(--font-roboto);
+  font-family: robotobold;
   line-height: 25px;
   font-weight: 500;
   color: #e0e9ed;
@@ -316,7 +316,7 @@
 }
 .projectsSubtitle{
   font-size: 60px;
-  font-family: var(--font-avenir);
+  font-family: avenir_nextdemi_bold;
   line-height: 75px;
   font-weight: 700;
   color: #ffffff;
@@ -580,13 +580,13 @@
 }
 .contactTitle{
   font-size: 60px;
-  font-family: var(--font-avenir);
+  font-family: avenir_nextdemi_bold;
   color: var(--color-yellow);
   text-align: center;
 }
 .contactSubtitle{
   font-size: 16px;
-  font-family: var(--font-roboto);
+  font-family: robotobold;
   color: var(--color-blue);
   text-align: center;
   font-weight: 600;
@@ -671,7 +671,7 @@
   font-size: 12px;
   color: #ffffff;
   font-weight: 400;
-  font-family: var(--font-roboto);
+  font-family: robotobold;
   text-transform: uppercase;
 }
 /* Enable hover only on non-touch devices */
@@ -996,7 +996,7 @@
     width: auto;
   }
   .contactTitle{
-    font-family: var(--font-avenir);
+    font-family: avenir_nextdemi_bold;
     font-size: 27px;
     font-weight: 700;
     line-height: 35px;
