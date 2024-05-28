@@ -537,7 +537,7 @@ export default function Home() {
                   Trabajemos juntos
                 </div>
                 <div className={`${styles.contactSubtitle}`}>
-                Para poder responder de la manera más rápida y precisa posible contáctanos via correo electrónico o whatsapp.
+                  Para poder responder de la manera más rápida y precisa posible contáctanos via correo electrónico o whatsapp.
                 </div>
                 <div className={`${styles.contactItemsContainer}`}>                  
                   <a className={`${styles.contactItem} ${styles.contactItemMail}`} href="mailto:infosoltop@gmail.com?subject=Contacto!">
@@ -565,6 +565,43 @@ export default function Home() {
                     
                     844 - 173- 7994
                   </a>
+                </div>
+                <div className={`${styles.contactSocialContainer}`}>
+                  <div className={`${styles.contactSubtitle}`}>
+                    Síguenos en nuestras redes sociales:
+                  </div>
+                  <div className={`${styles.contactSocialItems}`}>
+                    <a href="https://www.facebook.com/profile.php?id=61560280944823" target="_blank" rel="noopener" className={`${styles.contactSocial}`}>
+                      <Image
+                        src="/redes/img-socialmedia-facebook.png"
+                        alt="Facebook Logo"
+                        className={styles.contactSocialIcon}
+                        width={40}
+                        height={40}
+                        priority
+                      />
+                    </a>
+                    <a href="https://www.instagram.com/soltop_mx" target="_blank" rel="noopener" className={`${styles.contactSocial}`}>
+                      <Image
+                        src="/redes/img-socialmedia-instagram.png"
+                        alt="Instagram Logo"
+                        className={styles.contactSocialIcon}
+                        width={40}
+                        height={40}
+                        priority
+                      />
+                    </a>
+                    <a href="https://www.youtube.com/@soltop_mx" target="_blank" rel="noopener" className={`${styles.contactSocial}`}>
+                      <Image
+                        src="/redes/img-socialmedia-youtube.png"
+                        alt="Youtube Logo"
+                        className={styles.contactSocialIcon}
+                        width={40}
+                        height={40}
+                        priority
+                      />
+                    </a>
+                  </div>
                 </div>
               </div>
               <div className={`${styles.contactBgContainer}`}>

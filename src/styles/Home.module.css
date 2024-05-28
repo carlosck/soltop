@@ -1065,3 +1065,19 @@
   }
 }
 
+.contactSocialContainer{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 50px;
+}
+.contactSocialItems{
+  display: flex;
+  align-items: center;
+  width: 250px;
+  justify-content: center;
+  gap: 35px;
+}
+
