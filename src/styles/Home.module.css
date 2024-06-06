@@ -46,6 +46,10 @@
   gap: 30px;
 
 }
+.menuItem:hover{
+  font-family: 'robotobold';
+  color: #f5be18;
+}
 .menuItem{
   font-size: 18px;
   color: #ffffff;
@@ -54,8 +58,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-
 }
+
 .menuLogo{
   width: 82px;
   height: 55px;
@@ -79,6 +83,10 @@
   align-items: center;
   padding: 8px 13px;  
 }
+.menuWhats:hover{
+  background-color: #4d9900;
+  color: #ffffff;
+}
 .menuWhatsIcon{
   width: 28px;
   height: 28px;
@@ -86,10 +94,16 @@
   margin-left: 5px;
   color: #4d9900;
 }
+.menuWhats:hover .menuWhatsIcon{
+  color: #ffffff;
+}
 .menuWhatsText{
   font-size: 15px;
   color: #000000;
   font-weight: 700;
+}
+.menuWhats:hover .menuWhatsText{
+  color: #ffffff;
 }
 .heroText{
   display: flex;
@@ -118,7 +132,7 @@
   font-weight: 400;
   color: #ffffff;  
   margin-top: 50px;
-  font-family: 'robotobold';
+  font-family: 'robotoregular';
   padding-right: 90px;
   
 
@@ -173,9 +187,10 @@
 .servicesItemTitle{
   font-size: 24px;
   line-height: 32px;
-  font-weight: 500;
+  font-weight: 400;
   color: #000000;
   margin-top: 1rem;
+  font-family: 'avenir_nextdemi_bold';
 }
 .servicesTextContainer{
   display: flex;
@@ -196,7 +211,7 @@
   padding-right: 23px;
 }
 .servicesSubtitle{
-  font-family: 'robotobold';
+  font-family: 'robotoregular';
   font-size: 18px;
   line-height: 24px;
   font-weight: 400;
@@ -277,7 +292,7 @@
 }
 .misionSubtitle{
   font-size: 18px;
-  font-family: 'robotobold';
+  font-family: 'robotoregular';
   line-height: 25px;
   font-weight: 500;
   color: #e0e9ed;
@@ -416,6 +431,7 @@
 }
 .projectsItemName{
   font-size: 24px;
+  font-family: 'avenir_nextdemi_bold';
   line-height: 30px;
   font-weight: 700;
   color: #000000;
@@ -586,10 +602,10 @@
 }
 .contactSubtitle{
   font-size: 16px;
-  font-family: 'robotobold';
+  font-family: 'robotoregular';
   color: var(--color-blue);
   text-align: center;
-  font-weight: 600;
+  font-weight: 500;
   margin-top: 13px;
   max-width: 500px;
 }
@@ -1079,5 +1095,12 @@
   width: 250px;
   justify-content: center;
   gap: 35px;
+  
+}
+.contactSocialItems a{
+  transition: all 0.15s ease-in-out;
+}
+.contactSocialItems a:hover{
+  transform: scale(1.15);
 }
 
