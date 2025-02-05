@@ -12,7 +12,7 @@ export async function POST(req) {
     try {    
     
     const emailData = {
-        from: "carlosck@gmail.com",
+        from: "carlosck@soltop.com.mx",
         to: "carlosck@gmail.com",
         subject: "Nuevo Formulario Enviado",
         text: `Nombre: ${formData.nombre}\nPaterno: ${formData.paterno}\nMaterno: ${formData.materno}\nCorreo: ${formData.correo}\nCelular: ${formData.celular}`,
