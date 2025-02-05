@@ -22,6 +22,7 @@ const schema = z.object({
   correo: z.string().email("Correo inválido"),
   celular: z.string().min(10, "Número inválido"),
   cv: z.unknown().transform(value => {
+    console.log('value__',value[0]);
     return value[0];
   }),
 });
@@ -67,17 +68,18 @@ export default function Home() {
   const [message, setMessage] = useState("");
   const watchAllFields = watch()
   const onSubmit = async (data) => {
+    console.log('onSubmit data',data);
     const formData = new FormData();
     formData.append("nombre", data.nombre);
     formData.append("paterno", data.paterno);
     formData.append("materno", data.materno || "");
     formData.append("correo", data.correo);
     formData.append("celular", data.celular);
-    formData.append("cv", data.cv[0]);
+    formData.append("cv", data.cv);
 
     const res = await fetch("/api/send", {
       method: "POST",      
-      body: formData,
+      body: formData,      
     });
 
     if (res.ok) {

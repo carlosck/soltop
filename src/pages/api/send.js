@@ -6,10 +6,9 @@ export const config = {
 };
 
 export async function POST(req) {
-    /* const formData = await req.formData();
-    console.log('formData______',formData); */    
-    const jsonData = await req.json();
-    console.log('jsonData______',jsonData);
+    const formData = await req.formData();
+    console.log('formData______',formData);    
+    
     
     try {    
     
@@ -17,7 +16,13 @@ export async function POST(req) {
         from: "carlosck@soltop.com.mx",
         to: "carlosck@gmail.com",
         subject: "Nuevo Formulario Enviado",
-        text: `Nombre: ${formData.nombre ? formData.nombre : jsonData.nombre}\nPaterno: ${formData.paterno}\nMaterno: ${formData.materno}\nCorreo: ${formData.correo}\nCelular: ${formData.celular}`,
+        text: `Nombre: ${ formData.nombre }\nPaterno: ${formData.paterno}\nMaterno: ${formData.materno}\nCorreo: ${formData.correo}\nCelular: ${formData.celular}`,
+        attachments: [
+            {
+              filename: 'invoice.pdf',
+              content: formData.cv,
+            },
+          ]
         //text: `pruweba`,
     };
 
