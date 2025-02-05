@@ -6,8 +6,8 @@ export const config = {
 };
 
 export async function POST(req) {
-    const formData = await req.formData();
-    console.log('formData______',formData);    
+    /* const formData = await req.formData();
+    console.log('formData______',formData); */    
     const jsonData = await req.json();
     console.log('jsonData______',jsonData);
     
