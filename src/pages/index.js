@@ -1,18 +1,30 @@
-import { useState, useCallback } from "react";
+import { useState, useCallback, useEffect } from "react";
 import Head from "next/head";
 import Image from "next/image";
-import { Inter } from "next/font/google";
 import styles from '../styles/Home.module.css';
 import ReactGA from "react-ga4";
-import Lightbox from "yet-another-react-lightbox";
 import SoltopLogo from '../components/SoltopLogo';
 import WhatsAppLogo from "../components/WhatsLogo";
+
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import * as z from "zod";
 
 //import "yet-another-react-lightbox/styles.css";
 //import NextJsImage from "./NextJsImage";
 import FsLightbox from "fslightbox-react";
 ReactGA.initialize("G-PNN17KL6QD");
-
+ 
+const schema = z.object({
+  nombre: z.string().min(2, "El nombre es obligatorio"),
+  paterno: z.string().min(2, "El apellido paterno es obligatorio"),
+  materno: z.string().optional(),
+  correo: z.string().email("Correo inválido"),
+  celular: z.string().min(10, "Número inválido"),
+  cv: z.unknown().transform(value => {
+    return value[0];
+  }),
+});
 
 
 
@@ -41,8 +53,44 @@ export default function Home() {
     })();
     // eslint-disable-next-line
   }, [data]);
-
   
+  const {
+    register,
+    handleSubmit,
+    watch,
+    getValues,
+    formState: { errors },
+  } = useForm({ 
+    defaultValues: { nombre: "carlos", paterno: "seca", materno: "aguilar", correo: "carloscka@asd.com", celular: "1234567890", cv: null },
+    resolver: zodResolver(schema) });
+
+  const [message, setMessage] = useState("");
+  const watchAllFields = watch()
+  const onSubmit = async (data) => {
+    const formData = new FormData();
+    formData.append("nombre", data.nombre);
+    formData.append("paterno", data.paterno);
+    formData.append("materno", data.materno || "");
+    formData.append("correo", data.correo);
+    formData.append("celular", data.celular);
+    formData.append("cv", data.cv[0]);
+
+    const res = await fetch("/api/send", {
+      method: "POST",      
+      body: formData,
+    });
+
+    if (res.ok) {
+      setMessage("Correo enviado con éxito");
+    } else {
+      setMessage("Hubo un error al enviar el correo");
+    }
+  };
+  
+  useEffect(() => {
+    const dataForm= getValues();
+    console.log(dataForm);
+  }, [watchAllFields]);
   const slidesControl = [
     "/popups/control-tierra-01.jpg",
     "/popups/control-tierra-02.jpg",
@@ -536,6 +584,32 @@ export default function Home() {
                 <div className={`${styles.contactTitle}`}>
                   Trabajemos juntos
                 </div>
+                <>
+                  <div className="max-w-lg mx-auto p-6 bg-white rounded-lg shadow-md">
+                    <h2 className="text-2xl font-bold mb-4">Formulario de Contacto</h2>
+                    <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
+                      <input {...register("nombre")} placeholder="Nombre" className="border p-2 w-full" />
+                      {errors.nombre && <p className="text-red-500">{errors.nombre.message}</p>}
+
+                      <input {...register("paterno")} placeholder="Apellido Paterno" className="border p-2 w-full" />
+                      {errors.paterno && <p className="text-red-500">{errors.paterno.message}</p>}
+
+                      <input {...register("materno")} placeholder="Apellido Materno" className="border p-2 w-full" />
+
+                      <input {...register("correo")} type="email" placeholder="Correo" className="border p-2 w-full" />
+                      {errors.correo && <p className="text-red-500">{errors.correo.message}</p>}
+
+                      <input {...register("celular")} placeholder="Celular" className="border p-2 w-full" />
+                      {errors.celular && <p className="text-red-500">{errors.celular.message}</p>}
+
+                      <input {...register("cv")} type="file" className="border p-2 w-full" />
+                      {errors.cv && <p className="text-red-500">{errors.cv.message}</p>}
+
+                      <button type="submit" className="bg-blue-600 text-white p-2 rounded w-full">Enviar</button>
+                    </form>
+                    {message && <p className="mt-4 text-green-600">{message}</p>}
+                  </div>
+                </>
                 <div className={`${styles.contactSubtitle}`}>
                   Para poder responder de la manera más rápida y precisa posible contáctanos via correo electrónico o whatsapp.
                 </div>
