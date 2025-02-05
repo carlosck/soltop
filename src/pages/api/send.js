@@ -6,9 +6,7 @@ export const config = {
 };
 
 export async function POST(req) {
-    const formData = await req.formData();
-    console.log('formData______',formData);
-    
+            
     try {    
     
     const emailData = {
@@ -19,7 +17,7 @@ export async function POST(req) {
         text: `pruweba`,
     };
 
-    const resend = new Resend('re_V37JkJCC_3vfA8L9zAZz1cqiTVfkyMcyb');
+    const resend = new Resend(process.env.RESEND_API_KEY);
     console.log('resend',resend);
     await resend.emails.send(emailData);
     return NextResponse.json({ success: true }, { status: 200 });
