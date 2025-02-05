@@ -12,11 +12,11 @@ export async function POST(req) {
     try {    
     
     const emailData = {
-        from: "noreply@tuapp.com",
+        from: "carlosck@gmail.com",
         to: "carlosck@gmail.com",
         subject: "Nuevo Formulario Enviado",
-        //text: `Nombre: ${formData.nombre}\nPaterno: ${formData.paterno}\nMaterno: ${formData.materno}\nCorreo: ${formData.correo}\nCelular: ${formData.celular}`,
-        text: `pruweba`,
+        text: `Nombre: ${formData.nombre}\nPaterno: ${formData.paterno}\nMaterno: ${formData.materno}\nCorreo: ${formData.correo}\nCelular: ${formData.celular}`,
+        //text: `pruweba`,
     };
 
     const resend = new Resend(process.env.RESEND_API_KEY);
