@@ -1,13 +1,10 @@
-import { NextResponse } from "next/server";
+import { NextResponse, NextApiRequest } from "next/server";
 import { Resend } from "resend";
 
-export const config = {
-  runtime: "edge",
-};
 
 export async function POST(req) {
     const formData = await req.formData();
-    console.log('formData______',formData);    
+    console.log('formData______',req);    
     
     
     try {    
