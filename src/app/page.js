@@ -590,7 +590,7 @@ export default function Home() {
                   Trabajemos juntos
                 </div>
                 <>
-                  <div className="max-w-lg mx-auto p-6 bg-white rounded-lg shadow-md ">
+                  <div className="max-w-lg mx-auto p-6 bg-white rounded-lg shadow-md " style={{display: "none"}}>
                     <h2 className="text-2xl font-bold mb-4">Formulario de Contacto</h2>
                     <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
                       <input {...register("nombre")} placeholder="Nombre" className="border p-2 w-full" />
