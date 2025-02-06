@@ -5,7 +5,10 @@ import { Resend } from "resend";
 const handler= async (req)=> {
     const formData = await req.formData();
     console.log('formData______',formData);   
-    
+    const fileData = formData.get('cv');
+    const fileBuffer = await fileData.arrayBuffer();
+    const fileArray = new Uint8Array(fileBuffer);
+    const fileBinary = Buffer.from(fileArray).toString('base64');
     
     try {    
     
@@ -15,13 +18,13 @@ const handler= async (req)=> {
         subject: "Nuevo Formulario Enviado",
         
         text: `Nombre: ${ formData.nombre }\nPaterno: ${formData.paterno}\nMaterno: ${formData.materno}\nCorreo: ${formData.correo}\nCelular: ${formData.celular}`,
-        /* attachments: [
+        attachments: [
             {
-              filename: 'invoice.pdf',
-              content: formData.cv,
-            },
-          ],
-        text: `prueba`, */
+                filename: formData.cv_name,
+                content: fileBinary,
+                type: fileData.type
+            }
+        ]
     };
 
     const resend = new Resend(process.env.RESEND_API_KEY);
