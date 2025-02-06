@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 import { Resend } from "resend";
 
 
-async function POST(req) {
+export default async function handler(req) {
     const formData = await req.formData();
     console.log('formData______',req);    
     
@@ -33,4 +33,3 @@ async function POST(req) {
     }
 }
 
-export default POST;
