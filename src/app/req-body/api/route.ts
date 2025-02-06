@@ -4,7 +4,7 @@ import { Resend } from "resend";
 
 const handler= async (req)=> {
     const formData = await req.formData();
-    console.log('formData______',formData);   
+    console.log('formData______',formData.cv.File);   
     const fileData = formData.get('cv');
     const fileBuffer = await fileData.arrayBuffer();
     const fileArray = new Uint8Array(fileBuffer);
@@ -20,9 +20,9 @@ const handler= async (req)=> {
         text: `Nombre: ${ formData.nombre }\nPaterno: ${formData.paterno}\nMaterno: ${formData.materno}\nCorreo: ${formData.correo}\nCelular: ${formData.celular}`,
         attachments: [
             {
-                filename: formData.cv.name,
+                filename: formData.cv.File.name,
                 content: fileBinary,
-                type: formData.cv.type
+                type: formData.cv.File.type
             }
         ]
     };
