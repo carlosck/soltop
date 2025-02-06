@@ -13,14 +13,15 @@ const handler= async (req)=> {
         from: "carlosck@soltop.com.mx",
         to: "carlosck@gmail.com",
         subject: "Nuevo Formulario Enviado",
-        text: `Nombre: ${ formData.nombre }\nPaterno: ${formData.paterno}\nMaterno: ${formData.materno}\nCorreo: ${formData.correo}\nCelular: ${formData.celular}`,
-        attachments: [
+        
+        //text: `Nombre: ${ formData.nombre }\nPaterno: ${formData.paterno}\nMaterno: ${formData.materno}\nCorreo: ${formData.correo}\nCelular: ${formData.celular}`,
+        /* attachments: [
             {
               filename: 'invoice.pdf',
               content: formData.cv,
             },
-          ]
-        //text: `pruweba`,
+          ] */
+        text: `prueba`,
     };
 
     const resend = new Resend(process.env.RESEND_API_KEY);
