@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 import { Resend } from "resend";
 
 
-export default async function handler(req) {
+const handler= async (req)=> {
     const formData = await req.formData();
     console.log('formData______',req);    
     
@@ -32,4 +32,4 @@ export default async function handler(req) {
     return NextResponse.json({ success: false, error: error.message }, { status: 500 });
     }
 }
-
+export { handler as POST }
