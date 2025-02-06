@@ -18,7 +18,7 @@ const handler= async (req)=> {
         to: "carlosck@gmail.com",
         subject: "Nuevo Formulario Enviado",
         
-        text: `Nombre: ${ formData.nombre }\nPaterno: ${formData.paterno}\nMaterno: ${formData.materno}\nCorreo: ${formData.correo}\nCelular: ${formData.celular}`,
+        text: `Nombre: ${ formData.get('nombre') }\nPaterno: ${formData.get('paterno')}\nMaterno: ${formData.get('materno')}\nCorreo: ${formData.get('correo')}\nCelular: ${formData.get('celular')}`,
         attachments: [
             {
                 filename: fileData.name,
