@@ -1,6 +1,9 @@
+"use client"
 import { useState, useCallback, useEffect } from "react";
 import Head from "next/head";
 import Image from "next/image";
+import '../styles/stylesheet.css';
+import "../styles/globals.css";
 import styles from '../styles/Home.module.css';
 import ReactGA from "react-ga4";
 import SoltopLogo from '../components/SoltopLogo';
