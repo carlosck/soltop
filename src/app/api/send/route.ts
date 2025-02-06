@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 import { Resend } from "resend";
 
 
-export async function POST(req: Request) {
+async function POST(req: Request) {
     const formData = await req.formData();
     console.log('formData______',req);    
     
