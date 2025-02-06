@@ -4,7 +4,7 @@ import { Resend } from "resend";
 
 const handler= async (req)=> {
     const formData = await req.formData();
-    console.log('formData______',req);    
+    console.log('formData______',formData);   
     
     
     try {    
