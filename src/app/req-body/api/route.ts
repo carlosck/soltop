@@ -20,9 +20,9 @@ const handler= async (req)=> {
         text: `Nombre: ${ formData.nombre }\nPaterno: ${formData.paterno}\nMaterno: ${formData.materno}\nCorreo: ${formData.correo}\nCelular: ${formData.celular}`,
         attachments: [
             {
-                filename: formData.cv_name,
+                filename: formData.cv.name,
                 content: fileBinary,
-                type: fileData.type
+                type: formData.cv.type
             }
         ]
     };
