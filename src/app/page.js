@@ -80,7 +80,7 @@ export default function Home() {
     formData.append("celular", data.celular);
     formData.append("cv", data.cv);
 
-    const res = await fetch("/api/send", {
+    const res = await fetch("/api", {
       method: "POST",      
       body: formData,      
     });
