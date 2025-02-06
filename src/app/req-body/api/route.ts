@@ -15,12 +15,12 @@ const handler= async (req)=> {
         subject: "Nuevo Formulario Enviado",
         
         //text: `Nombre: ${ formData.nombre }\nPaterno: ${formData.paterno}\nMaterno: ${formData.materno}\nCorreo: ${formData.correo}\nCelular: ${formData.celular}`,
-        /* attachments: [
+        attachments: [
             {
               filename: 'invoice.pdf',
               content: formData.cv,
             },
-          ] */
+          ],
         text: `prueba`,
     };
 
