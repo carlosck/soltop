@@ -4,7 +4,7 @@ import { Resend } from "resend";
 
 const handler= async (req)=> {
     const formData = await req.formData();
-    console.log('formData______',formData.cv);   
+    console.log('formData______',formData);   
     const fileData = formData.get('cv');
     console.log('fileData______',fileData);
     const fileBuffer = await fileData.arrayBuffer();
@@ -21,9 +21,9 @@ const handler= async (req)=> {
         text: `Nombre: ${ formData.nombre }\nPaterno: ${formData.paterno}\nMaterno: ${formData.materno}\nCorreo: ${formData.correo}\nCelular: ${formData.celular}`,
         attachments: [
             {
-                filename: formData.cv.name,
+                filename: fileData.name,
                 content: fileBinary,
-                type: formData.cv.type
+                type: fileData.type
             }
         ]
     };
