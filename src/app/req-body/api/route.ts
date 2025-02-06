@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 import { Resend } from "resend";
 
 
-async function POST(req: Request) {
+async function POST(req) {
     const formData = await req.formData();
     console.log('formData______',req);    
     
@@ -13,11 +13,11 @@ async function POST(req: Request) {
         from: "carlosck@soltop.com.mx",
         to: "carlosck@gmail.com",
         subject: "Nuevo Formulario Enviado",
-        text: `Nombre: ${ formData.get('nombre') }\nPaterno: ${formData.get('paterno')}\nMaterno: ${formData.get('materno')}\nCorreo: ${formData.get('correo')}\nCelular: ${formData.get('celular')}`,
+        text: `Nombre: ${ formData.nombre }\nPaterno: ${formData.paterno}\nMaterno: ${formData.materno}\nCorreo: ${formData.correo}\nCelular: ${formData.celular}`,
         attachments: [
             {
               filename: 'invoice.pdf',
-              content: Buffer.from(await (formData.get('cv') as File).arrayBuffer()),
+              content: formData.cv,
             },
           ]
         //text: `pruweba`,
